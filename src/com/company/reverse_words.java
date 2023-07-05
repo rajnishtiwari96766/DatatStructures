@@ -6,7 +6,7 @@ public class reverse_words {
     static void rev_words(String str){
         Stack<String> s=new Stack<>();
 
-        String[] s1=str.split(" ");
+        String[] s1=str.split("\\s+");
 
         for(String s2:s1){
             s.push(s2);
