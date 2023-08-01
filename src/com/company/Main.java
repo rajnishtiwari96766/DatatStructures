@@ -14,6 +14,5 @@ public class Main {
 
         int sum=a+b;
         System.out.println("sum of the entered number's is:"+sum);
-
     }
 }
