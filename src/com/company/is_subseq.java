@@ -20,25 +20,42 @@
 //}
 
 
-package com.company;
-public class is_subseq {
-    static boolean subseq(String s,String t){
-        int i=0;
-        boolean seq_present=false;
-//        i=s.charAt(i);
+//package com.company;
+//public class is_subseq {
+//    static boolean subseq(String s,String t){
+//        int i=0;
+//        boolean seq_present=false;
+////        i=s.charAt(i);
+//
+//        for(int j=0;j<t.length();j++){
+//                if(t.charAt(j)==s.charAt(i)){
+//                    i++;
+//                }
+//        }
+//
+//        if(i==s.length()){
+//            seq_present=true;
+//        }
+//        return seq_present;
+//    }
+//    public static void main(String[] args) {
+//
+//    }
+//}
 
-        for(int j=0;j<t.length();j++){
-                if(t.charAt(j)==s.charAt(i)){
-                    i++;
-                }
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+
+        int si=0;
+        if(s.length()<1)
+            return true;
+        for(int i=0;i<t.length();i++){
+            if(s.charAt(si)==t.charAt(i))
+                si++;
+
+            if(si==s.length())
+                return true;
         }
-
-        if(i==s.length()){
-            seq_present=true;
-        }
-        return seq_present;
-    }
-    public static void main(String[] args) {
-
+        return false;
     }
 }
